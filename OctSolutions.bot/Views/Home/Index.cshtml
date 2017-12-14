@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row home-banner">
+    <h1>Find technology that works for you</h1>
+    <p class="lead">OCT is dedicated to providing smart solutions</p>
+    <div class="col-lg-4 col-lg-offset-4 input-group">
+        @using (Html.BeginForm("Dialogue", "Home"))
+        {
+        <div class="input-group">
+            @Html.TextBox("searchText", null, new { @class = "form-control" })
+            <span class="input-group-btn">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </span>
+        </div>
+        }
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            var body = $("body");
+            body.css("background-image", "url(/Content/homepage-background_whyte-ave-2.jpg)");
+            body.css("background-size", "cover");
+        });
+    </script>
+
+}

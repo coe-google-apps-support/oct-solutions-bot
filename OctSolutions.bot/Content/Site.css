@@ -1,0 +1,43 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/*.home-banner {
+    background-image: url(/Content/homepage-background_whyte-ave-2.jpg); background-size: cover;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+.home-banner {
+    font-family: "Work Sans";
+    margin-top: 16em;
+    text-align: center;
+}
+.home-banner h1 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.home-banner .lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+#bot {
+    background-color: white;
+}
