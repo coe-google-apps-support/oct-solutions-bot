@@ -1,26 +1,52 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Dialogue";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.SearchText</h3>
-
-<p>Use this area to provide additional information.</p>
-
 
 <div id="bot" />
 @section Scripts
 {
     <script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
     <script>
-        var x = BotChat.App({
-            directLine: { secret: 'UeGQtD4Xn0Q.cwA.ypk.d2ItG6Ay-rq5fj3e2hdsbrNdktEqqxbF5nmD_ejkXE0' },
-            user: { id: 'Dan' },
+        const botConnection = new BotChat.DirectLine({
+            secret: 'UeGQtD4Xn0Q.cwA.ypk.d2ItG6Ay-rq5fj3e2hdsbrNdktEqqxbF5nmD_ejkXE0'
+        });
+
+        var user = {
+            id: 'Dan'
+        };
+
+        BotChat.App({
+            //directLine: { secret: 'UeGQtD4Xn0Q.cwA.ypk.d2ItG6Ay-rq5fj3e2hdsbrNdktEqqxbF5nmD_ejkXE0' },
+            botConnection: botConnection, 
+            user: user,
             bot: { id: '11d6de00-1c1c-4126-954c-d7fc0d7dc29e' },
             resize: 'detect'
         }, document.getElementById("bot"));
+
         var text = "@ViewBag.SearchText";
-        var z = x;
-        debugger;
+        botConnection.postActivity({
+            type: "message",
+            from: user,
+            text: text
+        }).subscribe(function (x) {
+            console.log("message posted");
+        });
+
+        botConnection.activity$
+            .subscribe(function (a) {
+                var x = $(".wc-message-group-content");
+
+                console.log(a);
+            });
+
+
+        //botConnection.activity$
+        //    .filter(function (activity) {
+        //        return activity.type === 'event' ;
+        //    })
+        //    .subscribe(function (activity) {
+        //        console.log(activity);
+        //    });
     </script>
 
 }
