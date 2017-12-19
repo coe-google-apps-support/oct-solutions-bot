@@ -18,7 +18,8 @@ namespace OctSolutions.bot
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                await Conversation.SendAsync(activity, () => new Dialogs.BasicLuisDialog());
+                // if user is authenticated
+                await Conversation.SendAsync(activity, () => new Dialogs.SignInDialog<object>(new Dialogs.BasicLuisDialog()));
             }
             else
             {

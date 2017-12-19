@@ -1,6 +1,8 @@
-﻿using OctSolutions.bot.App_Start;
+﻿using AuthBot.Models;
+using OctSolutions.bot.App_Start;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -20,6 +22,11 @@ namespace OctSolutions.bot
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Set up Google OAuth
+            AuthSettings.ClientId = ConfigurationManager.AppSettings["GoogleOAuthClientId"];
+            AuthSettings.ClientSecret = ConfigurationManager.AppSettings["GoogleOAuthClientSecret"];
+            AuthSettings.RedirectUrl = ConfigurationManager.AppSettings["GoogleOAuthRedirectUrl"];
         }
     }
 }
