@@ -8,12 +8,12 @@
     <div class="col-lg-4 col-lg-offset-4 input-group">
         @using (Html.BeginForm("Dialogue", "Home"))
         {
-        <div class="input-group">
-            @Html.TextBox("searchText", null, new { @class = "form-control" })
-            <span class="input-group-btn">
-                <input type="submit" value="Search" class="btn btn-primary" />
-            </span>
-        </div>
+            <div class="input-group">
+                @Html.TextBox("searchText", null, new { @class = "form-control" })
+                <span class="input-group-btn">
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </span>
+            </div>
         }
     </div>
 </div>
@@ -29,3 +29,10 @@
     </script>
 
 }
+
+
+<div id="app">
+    { { message } }
+</div>
+
+@Scripts.Render("~/Scripts/app/home/bundle.js")

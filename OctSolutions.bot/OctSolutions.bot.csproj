@@ -209,6 +209,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
@@ -222,6 +223,20 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="vue\build\build.js" />
+    <Content Include="vue\build\check-versions.js" />
+    <Content Include="vue\build\logo.png" />
+    <Content Include="vue\build\utils.js" />
+    <Content Include="vue\build\vue-loader.conf.js" />
+    <Content Include="vue\build\webpack.base.conf.js" />
+    <Content Include="vue\build\webpack.dev.conf.js" />
+    <Content Include="vue\build\webpack.prod.conf.js" />
+    <Content Include="vue\build\webpack.test.conf.js" />
+    <Content Include="vue\config\dev.env.js" />
+    <Content Include="vue\config\index.js" />
+    <Content Include="vue\config\prod.env.js" />
+    <Content Include="vue\config\test.env.js" />
+    <Content Include="vue\src\Home\main.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -256,6 +271,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Dialogue.cshtml" />
+    <Content Include="vue\static\.gitkeep" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

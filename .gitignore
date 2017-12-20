@@ -12,6 +12,15 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+#Vue stuff:
+Scripts/app/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+test/unit/coverage/
+test/e2e/reports/
+selenium-debug.log
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -23,6 +32,9 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+
+# VSCode
+.vscode
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
